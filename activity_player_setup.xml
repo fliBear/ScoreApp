@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/infoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Enter player data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
+
+
+    <EditText
+        android:id="@+id/enterPlayerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Player"
+        android:inputType="text"
+        android:maxLength="15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTxt" />
+
+    <EditText
+        android:id="@+id/enterScoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_toRightOf="@id/enterPlayerTxt"
+        android:hint="Score"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/enterPlayerTxt"
+        app:layout_constraintStart_toEndOf="@+id/enterPlayerTxt"
+        app:layout_constraintTop_toTopOf="@+id/enterPlayerTxt"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/createPlayerImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_toRightOf="@+id/enterScoreTxt"
+        android:src="@drawable/ic_add_player"
+        app:layout_constraintBottom_toBottomOf="@+id/enterScoreTxt"
+        app:layout_constraintStart_toEndOf="@+id/enterScoreTxt"
+        app:layout_constraintTop_toTopOf="@+id/enterScoreTxt"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

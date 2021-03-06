@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subParent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showRel"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player"
+                android:layout_margin="5dp"
+                android:id="@+id/playerTxt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Round"
+                android:layout_toLeftOf="@+id/playerDelete"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="100dp"
+                android:id="@+id/roundTxt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:layout_toLeftOf="@+id/roundTxt"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:id="@+id/scoreTxt"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerDelete"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/playerEdit"
+                android:src="@drawable/ic_edit"
+                android:layout_toLeftOf="@id/playerDelete"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editFinish"
+                android:src="@drawable/ic_edit_finish"
+                android:layout_toLeftOf="@id/playerDelete"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editRel"
+            android:layout_below="@id/showRel"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Player"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/editPlayerTxt"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:inputType="text"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editScoreTxt"
+                android:layout_toRightOf="@id/editPlayerTxt"
+                android:hint="Score"
+                android:layout_marginLeft="30dp"
+                android:maxLines="1"
+                android:imeOptions="actionNext"
+                android:inputType="numberSigned"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editLastRoundTxt"
+                android:layout_toRightOf="@id/editScoreTxt"
+                android:hint="Set last round score"
+                android:layout_marginLeft="30dp"
+                android:inputType="numberSigned"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextRoundRel"
+            android:layout_below="@+id/editRel"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roundScoreTxt"
+                android:hint="Enter round score"
+                android:layout_marginLeft="2dp"
+                android:inputType="numberSigned"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roundScoreConfirmImg"
+                android:src="@drawable/ic_edit_finish"
+                android:layout_toRightOf="@+id/roundScoreTxt"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

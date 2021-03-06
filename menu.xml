@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nextRound"
+        android:showAsAction="always"
+        android:title="Next round"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/themes"
+        android:title="Choose theme"
+        android:showAsAction="never">
+
+        <menu>
+
+            <item
+                android:id="@+id/light_theme"
+                android:title="Light theme"/>
+
+            <item
+                android:id="@+id/dark_theme"
+                android:title="Dark theme"/>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/addPlayer"
+        android:title="Add player"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+</menu>
